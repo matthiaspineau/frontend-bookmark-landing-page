@@ -1,0 +1,99 @@
+.wrapper__contact {
+    padding: 100px 20px 35px 20px;
+    background: $soft-blue;
+    color: $text-white;
+}
+
+.contact {
+
+    &__text__sm {
+        display: block;
+        // margin-bottom: 15px;
+        text-align: center;
+        font-size: 0.8rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+    }
+
+    &__text__bg {
+        display: block;
+        max-width: 345px;
+        margin: 15px auto;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    @media (min-width: 1400px) {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+}
+
+.contact__form {
+
+    @media (min-width: 1400px) {
+        width: 80%;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        // border: none;
+        border: 1px solid;
+        border-color: $white-color;
+    }
+
+    &__error__text {
+        display: none;
+        padding: 5px;
+        background-color: $soft-red;
+        font-size: 0.8rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+   
+}
+
+.contact__form.error {
+    .contact__form__input {
+        border-color: $soft-red;
+    }
+
+    .contact__form__error__text {
+        display: block;
+    }
+}
+
+.btn__contact__us {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    color: $text-white;
+    border-radius: 5px;
+    background-color: $soft-red;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 1400px) {
+        width: inherit;
+        margin-top: 0px;
+    }
+}
+
+.wrapper__form {
+
+    @media (min-width: 1400px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+   
+   
+}
+

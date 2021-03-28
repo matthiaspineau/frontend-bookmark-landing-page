@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
       <!-- Navigation -->
       <nav class="contain__navbar">
         <div class="container">
@@ -135,12 +134,61 @@
           </div>
 
           <div>
-            <button class="btn btn__blue__plain">More</button>
+            <button class="btn btn__blue__plain btn__center">More info</button>
           </div>
 
         </section>
 
+        <!-- Section contact us -->
+        <section class="section wrapper__contact">
+          <div class="container">
+            <div class="contact">
+              <span class="contact__text__sm">35,000+ already joined</span>
+              <span class="contact__text__bg">Stay up-to-date with what we're doing</span>
+              <div class="wrapper__form">
+                <div class="contact__form"
+                :class="{error : errorUserMail}">
+                    <div>
+                      <form action="">
+                        <input 
+                        v-model="userMail"
+                        type="text" 
+                        class="contact__form__input">
+                      </form>
+                      <span class="contact__form__error__icon"></span>
+                    </div>
+                    <span class="contact__form__error__text">Whoops, moke sure it's an email</span>
+                </div>
+                <span class="btn__contact__us" @click.prevent="sendMail(userMail)">Contact us</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <!-- Footer -->
+      <footer class="wrapper__footer">
+        <div class="container">
+          <div class="footer">
+            <h2 class="footer__logo">
+              <img :src="require('@/assets/image/logo-bookmark-autre.svg')" alt="">
+            </h2>
+            <ul class="footer__links">
+              <li class="footer__link"><a href="">Features</a></li>
+              <li class="footer__link"><a href="">Pricing</a></li>
+              <li class="footer__link"><a href="">Contact</a></li>
+            </ul>
+            <div class="footer__social">
+              <a href="" class="footer__link__social">
+                <img :src="require('@/assets/image/icon-facebook.svg')" alt="">
+              </a>
+              <a href="" class="footer__link__social">
+                <img :src="require('@/assets/image/icon-twitter.svg')" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 
   </div>
@@ -155,7 +203,7 @@ import AskItem from '@/components/ask/AskItem.vue';
 import FileTabs from '@/assets/file/tabs.json';
 import FileCards from '@/assets/file/cards.json';
 import FileQuestions from '@/assets/file/questions.json';
-
+// /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)
 
 export default {
   name: 'App',
@@ -163,10 +211,19 @@ export default {
     return {
       tabs: FileTabs.data,
       cards: FileCards.data,
-      questions: FileQuestions.data
+      questions: FileQuestions.data,
+      userMail: '',
+      errorUserMail: false,
     }
   },
   methods: {
+    sendMail(email) {
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+          this.errorUserMail = false
+      } else {
+        this.errorUserMail = true
+      }
+    },
     answerAsk(payload) {
       console.log(payload.message)
       if (document.querySelector('.ask.activate')) {

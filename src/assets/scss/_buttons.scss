@@ -7,6 +7,11 @@
     cursor: pointer;
 }
 
+.btn__center {
+    display: block;
+    margin: 5px auto;
+}
+
 .btn__light__plain {
     color: $dark-blue;
     background: $grayish-blue;
@@ -54,16 +59,9 @@
 // }
 
 
-// @media (min-width: 1400px) {
-//     .btn__light__border__lg {
-//         color: $text-white;
-//         background: $soft-blue;
-//         box-shadow: $box-shadow-grayish-blue;
-//     }
-//     .btn__blue__border__lg {
-//         color: $text-white;
-//         background: $soft-blue;
-//         box-shadow: $box-shadow-grayish-blue;
-//         border: 1px solid 
-//     }
-// }
+@media (min-width: 1400px) {
+    .btn__center__lg {
+        display: block;
+        margin: 5px auto;
+    }
+}
