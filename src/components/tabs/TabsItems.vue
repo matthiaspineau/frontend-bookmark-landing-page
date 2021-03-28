@@ -13,7 +13,7 @@
                 <h2 class="t-tab__text__title">{{ item.title }}</h2>
                 <p class="t-tab__text__p">{{ item.description }}</p>
                 <div class="t-tab__text__buttons">
-                <button class="btn btn__blue__plain btn__center">{{ item.button }}</button>
+                <button class="btn btn__blue__plain btn__center__sm">{{ item.button }}</button>
                 </div>
             </div>
         </div>
