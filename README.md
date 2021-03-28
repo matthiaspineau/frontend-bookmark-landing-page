@@ -1,24 +1,16 @@
 # front-bookmark
 
-## Project setup
-```
-npm install
-```
+## Frontend Mentor - Bookmark landing page solution
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### The challenge
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the newsletter form is submitted if:
+  - The input field is empty
+  - The email address is not formatted correctly

@@ -18,9 +18,13 @@ body {
 
 #app {
     font-family: $rubik-regular;
+    a {
+        text-decoration: none;
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
+
