@@ -1,0 +1,26 @@
+// ----- Font
+$rubik-medium: 'rubik-medium';
+$rubik-regular: 'rubik-regular';
+
+// ----- Color
+// #primary
+// - Soft Blue: hsl(231, 69%, 60%)
+// - Soft Red: hsl(0, 94%, 66%)
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+// ### Neutral
+// - Grayish Blue: hsl(229, 8%, 60%)
+// - Very Dark Blue: hsl(229, 31%, 21%)
+$grayish-blue: hsl(229, 8%, 60%);
+$dark-blue: hsl(229, 31%, 21%);
+
+$text-white: #fff;
+$white-color: #fff;
+
+$bg-dark-blue-opacity: rgba(37, 43, 70, 0.8);
+
+$box-shadow-grayish-blue: 0px 3px 2px $grayish-blue;
+
+body {
+    font-size: 18px;
+}

@@ -1,0 +1,27 @@
+{
+    "data": {
+        "cards": [
+            {
+                "id": 1,
+                "title": "Add to Chrome",
+                "description": "Minimun version 62",
+                "img": "logo-chrome",
+                "button": "Add & Install Extension"
+            },
+            {
+                "id": 2,
+                "title": "Add to Firefox",
+                "description": "Minimun version 55",
+                "img": "logo-firefox",
+                "button": "Add & Install Extension"
+            },
+            {
+                "id": 3,
+                "title": "Add to Opera",
+                "description": "Minimun version 46",
+                "img": "logo-opera",
+                "button": "Add & Install Extension"
+            }
+        ]
+    }
+}

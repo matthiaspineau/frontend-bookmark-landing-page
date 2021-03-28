@@ -1,0 +1,150 @@
+// ----- Tab item : t-tab
+.t-tab.visible {
+    display: flex;
+}
+
+.t-tab {
+    display: none;
+    flex-direction: column;
+    margin-top: 35px;
+
+
+    &__media {
+        position: relative;
+        min-height: 275px;
+        width: 100%;
+        margin: 15px 0px;
+
+        .bg__media {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 80%;
+            width: 80%;
+            border-top-right-radius: 80%;
+            border-bottom-right-radius: 80%;
+            background: $soft-blue;
+            z-index: -1;
+            transform: translate(-30px,30px);
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin: 15px 0px;
+
+    }
+
+    &__text__title {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 500;
+        font-size: 1.9rem;
+        color: $dark-blue;
+    }
+
+    &__text__p {
+        margin-bottom: 20px;
+        font-size: 400;
+        color: $grayish-blue;
+        text-align: center;
+    }
+
+    @media (min-width: 1400px) {
+       
+        flex-direction: row;
+        
+
+        &__media {
+            min-height: 420px;
+            width: 50%;
+            padding: 25px;
+
+            .bg__media {
+               transform: translateX(-150px);
+            }
+        } 
+
+        &__text {
+            width: 50%;
+            padding: 25px;
+        }
+
+        &__text__title {
+            max-width: 300px;
+            font-size: 2rem;
+            text-align: left;
+        }
+    
+        &__text__p {
+            max-width: 520px;
+            text-align: left;
+        }
+    }
+}
+
+// ------ Naviagtion tabs : n-tab
+.n-tabs {
+    
+    &__list {
+        padding: 0;
+        text-align: center;
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        padding: 10px 0px;
+        color: $dark-blue;
+        opacity: 0.8;
+        list-style-type: none;
+        border-bottom: 1px solid $grayish-blue;
+        cursor: pointer;
+
+        span {
+            padding: 10px 0px;
+        }
+
+    }
+
+    &__link.active {
+        opacity: 1;
+    }
+
+    &__link.active::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        left: calc(50% - 25%);
+        bottom: 0;
+        background: $soft-red;
+    }
+
+    &__link:first-child {
+        border-top: 1px solid $grayish-blue;
+    }
+
+    @media (min-width: 1400px) {
+
+        &__link {
+            display: inline-block;
+            width: 33.33%;
+
+            span {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__link:first-child {
+            border-top: none;
+        }
+
+        &__link.active::before {
+            width: 100%;
+            left: 0%;
+        }
+    }
+}
